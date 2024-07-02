@@ -1,0 +1,44 @@
+.quest-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .background-image {
+    width: 1112px; /* Độ rộng của hình ảnh */
+    height: 694px; /* Chiều cao của hình ảnh */
+    flex-shrink: 0; /* Không cho phép co giãn theo phương dọc */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 50%; /* Đặt ở giữa dọc */
+    left: 50%; /* Đặt ở giữa ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển về giữa */
+    z-index: -1; /* Đưa ảnh nền xuống dưới cùng */
+  }
+  
+  .overlay-image {
+    z-index: 1; /* Đưa overlay ảnh lên trên cùng */
+    margin-top: 5px;
+    width: 1100px;
+    height: 680px;
+    opacity: 1;
+  }
+  
+  .paimon {
+    z-index: 2; /* Đưa paimon lên trên cùng overlay-image */
+    position: absolute;
+    top: 30%; /* Điều chỉnh vị trí top của paimon theo yêu cầu */
+    left: 80%; /* Điều chỉnh vị trí left của paimon theo yêu cầu */
+    transform: translate(-50%, -50%);
+  }
+  
+  .QuestHub {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+  }
+  

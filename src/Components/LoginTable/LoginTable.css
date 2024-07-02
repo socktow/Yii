@@ -1,0 +1,110 @@
+#dialog {
+    position: absolute;
+    z-index: 5;
+    border-radius: 0.35em;
+    border: none;
+    font-size: 1em;
+    top: 50%;
+  }
+  
+  #dialog .title {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-family: title;
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  
+  #dialog .input {
+    font-family: text;
+    align-self: center;
+    width: 23em;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-bottom: 1em;
+    border-radius: 0.25em;
+  }
+  
+  #dialog .login {
+    background-color: #383b40;
+    color: #e5cba8;
+    margin-top: 1.5em;
+  }
+  
+  #dialog .close {
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    font-size: 1em;
+    background: #8b4513; /* Brown background */
+    color: #ffffff; /* White text */
+    border: 1px solid #8b4513; /* Brown border */
+    border-radius: 0.25em;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+  
+  .door-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .door-video.zooming {
+    animation: zoom_door 2.3s ease forwards, white_filter 2s ease forwards 0.7s;
+  }
+  
+  @keyframes zoom_door {
+    to {
+      transform: scale(10);
+      bottom: -15%;
+    }
+  }
+  
+  @keyframes white_filter {
+    20% {
+      filter: brightness(0) invert(1);
+    }
+    100% {
+      filter: brightness(0);
+    }
+  }
+  
+  .error-message {
+    color: black; /* Set text color to black */
+    font-size: 14px; /* Adjust font size as needed */
+    margin-top: 5px; /* Provide some spacing */
+    margin-bottom: 1px; /* Provide some spacing */
+    text-align: center; /* Center align the text */
+    font-family: text;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
